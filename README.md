@@ -17,6 +17,7 @@
 ## 4. UI/BM
 ## 5. 기능
 ### 5-1. 기능 목록
+<img src="./assets/images/function_list.png" width="30%">
 ### 5-2. 메인 기능
 ### 5-3. 추가 기능
 ## 6. 개발하면서 느낀점
