@@ -1,4 +1,4 @@
-# 신입 개발자 기술 면접 준비 지원 서비스
+# 개발자 기술 모의 면접 지원 서비스
 
 ## 1. 목표와 기능
 ### 1-1. 목표
@@ -33,7 +33,7 @@
 
 ## 5. 기능
 ### 5-1. 기능 목록
-<img src="./assets/images/function_list.png" width="80%">
+<img src="./assets/images/function_list_v1.1.png" width="80%">
 
 ### 5-2. 메인 기능
 ### 5-3. 추가 기능
