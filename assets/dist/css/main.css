@@ -1,0 +1,17 @@
+body{
+	background-color: aqua;
+}
+.nav-ormi{
+	width: 10%;	
+}
+
+.logo-title .nav-item{
+	display: flex;
+	align-items: center;
+}
+
+.nav-link{
+	box-sizing: border-box;
+	max-width: 200px;
+	margin: 0;
+}
