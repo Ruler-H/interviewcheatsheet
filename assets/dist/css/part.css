@@ -15,7 +15,7 @@
 	margin-bottom: 1rem;
 }
 
-.main{
+.idx-main{
 	margin-top: 5rem;
 	display: flex;
 	flex-direction: column;
@@ -42,12 +42,7 @@
 	background-color: rgb(148, 203, 196);
 }
 
-.career-second-card{
-	background-color:rgb(229, 228, 224);
-}
-
-.card:nth-child(3),
-.job-second-card{
+.card:nth-child(2){
 	background-color:rgb(222, 194, 156);
 }
 
@@ -67,10 +62,6 @@
 	color: white;
 }
 
-.career-second-card .card-title{
-	color: black;
-}
-
 .card-body > .btn{
 	width: 100%;
 }
@@ -78,17 +69,4 @@
 .pre-btn{
 	margin-left: 26.5rem;
 	align-self: center;
-}
-
-.start-desc{
-	font-size: 2rem;
-	font-weight: bold;
-	line-height: 3rem;
-}
-
-.group-btn{
-	width: 20rem;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 2rem;
 }
