@@ -16,20 +16,42 @@
 ### 3-2. 개발 일정
 ## 4. UI/BM
 ### 4-1. 목업 페이지
-- 메인페이지
+- 목업 페이지 웹 테스트URL : https://ovenapp.io/view/C3LmQ9sGvyqM28Cg9ZejPeTYKSOK1O5K/5IAOQ
+- 메인페이지 - 경력 선택 화면
 <img src="./assets/images/01_main Page.png" width="80%">
 
-- 메인페이지 - Chat 화면
-<img src="./assets/images/02_main Page-chat.png" width="80%">
+- 메인페이지 - 분야 선택 화면
+<img src="./assets/images/02_main Page - after click career.png" width="80%">
 
-- BE Cheat Sheet 페이지
-<img src="./assets/images/03_BE Cheat Sheet Page.png" width="80%">
+- 모의 면접 시작 화면
+<img src="./assets/images/03_main Page - after click part.png" width="80%">
 
-- FE Cheat Sheet 페이지
-<img src="./assets/images/04_FE Cheat Sheet Page.png" width="80%">
+- 모의 면접 첫 질문 화면
+<img src="./assets/images/04_main Page - Mock Interview.png" width="80%">
 
-- Only For Me 페이지
-<img src="./assets/images/05_Only For Me Page.png" width="80%">
+- 모의 면접 첫 결과 화면
+<img src="./assets/images/05_main Page - after submit answer.png" width="80%">
+
+- 모의 면접 첫 결과 즐겨찾기 등록 화면
+<img src="./assets/images/06_main Page - after click to star.png" width="80%">
+
+- 모의 면접 마지막 질문 화면
+<img src="./assets/images/07_main Page - Mock Interview - last question.png" width="80%">
+
+- 모의 면접 마지막 질문 결과 화면
+<img src="./assets/images/08_main Page - after submit answer for last question.png" width="80%">
+
+- 모의 면접 결과 화면
+<img src="./assets/images/09_main Page - Mock Interview Result.png" width="80%">
+
+- CheatSheet 화면 1
+<img src="./assets/images/10_BE Cheat Sheet Page 1.png" width="80%">
+
+- CheatSheet 화면 2
+<img src="./assets/images/11_BE Cheat Sheet Page 2.png" width="80%">
+
+- OnlyForMe(즐겨찾기 페이지) 화면
+<img src="./assets/images/12_Only For Me Page.png" width="80%">
 
 ## 5. 기능
 ### 5-1. 기능 목록
