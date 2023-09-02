@@ -1,3 +1,12 @@
+/* layout */
+.footer-area{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 3rem;
+}
+
+
 .ormi-img{
 	width: 3rem;
 	margin-right: 0.5rem;
@@ -36,7 +45,9 @@
 	justify-content: center;
 }
 
-.card{
+.fP-card,
+.career-second-card,
+.jSP-card{
 	width: 15rem;
 	display: flex;
 	background-color: rgb(148, 203, 196);
@@ -55,23 +66,26 @@
 	width: 100%;
 }
 
-.card-body{
+.fP-cardBody,
+.jSP-cardBody{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.card-title{
+.fP-cardTitle,
+.jSP-cardTitle{
 	font-weight: bold;
 	font-size: 1.5rem;
 	color: white;
 }
 
-.career-second-card .card-title{
+.career-second-card .fP-cardTitle{
 	color: black;
 }
 
-.card-body > .btn{
+.fP-cardBody > .btn,
+.jSP-cardBody > .btn{
 	width: 100%;
 }
 
@@ -92,3 +106,103 @@
 	justify-content: space-between;
 	margin-top: 2rem;
 }
+
+/* interviewPage & resultPage & finalResultPage CSS */
+.iP-container,
+.rP-container,
+.fRP-container{
+	min-width: 30rem;
+	min-height: 30rem;
+}
+
+.rP-cardHeader,
+.iP-cardHeader,
+.iP-cardFooter,
+.fRP-cardHeader{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+/* interviewPage CSS */
+.iP-question{
+	display: flex;
+	height: 10rem;
+	max-width: 28rem;
+}
+
+.iP-inputGroup{
+	height: 10rem;
+}
+
+.iP-textarea{
+	resize: none;
+}
+
+.iP-inputGroup > button{
+	background-color: #0d6efd;
+	color: white;
+}
+
+.iP-cardFooter{
+	justify-content: flex-end;
+}
+
+/* resultPage & finalResultPage CSS */
+.rP-cardBody,
+.fRP-cardBody{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 30rem;
+}
+
+.rP-cardContent,
+.fRP-cardContent{
+	width: 100%;
+	height: 10rem;
+}
+
+.rP-questionPurpose,
+.rP-questionAnswer,
+.fRP-redeem{
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.rP-cardText,
+.rP-cardContent > h5,
+.fRP-cardContent{
+	text-align: left;
+}
+
+.rP-hr,
+.fRP-hr{
+	border: solid 0.1rem;
+	width: 100%;
+	margin: 0.5rem 0;
+}
+
+.rP-nextBtn,
+.fRP-restartBtn{
+	margin-left: 23rem;
+}
+
+/* resultPage CSS */
+.rP-star{
+	width: 1rem;
+}
+
+.rP-rightHeader{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.rP-questionAnswer{
+	margin-top: 2rem;
+}
+
+/* finalResultPage */
