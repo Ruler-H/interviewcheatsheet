@@ -41,8 +41,6 @@
 
 
 
-
-
 .main{
 	margin-top: 5rem;
 	display: flex;
@@ -50,6 +48,7 @@
 	align-items: center;
 	gap: 2rem;
 	width: 100%;
+	min-height: 40rem;
 }
 
 .card-group-title{
