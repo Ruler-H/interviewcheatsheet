@@ -1,3 +1,12 @@
+/* common CSS */
+.card{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-text{
+	line-height: 2rem;
+}
+
 /* layout CSS */
 .footer-area{
 	display: flex;
@@ -288,6 +297,14 @@
 .BEP-arrow,
 .FEP-arrow{
 	width: 2rem;
+}
+
+.BEP-arrowContainer,
+.FEP-arrowContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 /* OnlyForMePage CSS */

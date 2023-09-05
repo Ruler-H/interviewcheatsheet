@@ -46,7 +46,7 @@ const jobSelectPage = `
 <button type="button" class="btn btn-secondary btn-lg pre-btn">이전으로</button>
 `;
 
-const interviewStartPage = (str1,str2)=> `
+const interviewStartPage = (str1, str2) => `
 <p class="start-desc">당신은 ${str1} ${str2} 개발자입니다.<br> 맞다면 모의 면접 시작 버튼을 눌러주세요.</p>
     
 <div class="group-btn">
@@ -177,176 +177,93 @@ const BEPage = (str1, str2, str3, str4, str5, str6, str7, str8) => `
 					</div>
 				</div>
 			</div>
-			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right BEP-arrow" viewBox="0 0 16 16">
-				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-			</svg>
+			<button class=BEP-arrowContainer>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right BEP-arrow" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>
+			</button>
 		</div>
 `
 
-const FEPage = `
+const FEPage = (str1, str2, str3, str4, str5, str6, str7, str8) => `
 <div class="FEP-title">
 <p class="h1 FEP-h1">FE Cheat Sheet</p>
 </div>
 <div class="FEP-cardGroup">
 <div class="card text-center FEP-container">
 	<div class="card-header FEP-cardHeader">
-		<p>난이도 : 하</p>
-		<img src="./assets/dist/images/empty-star.png" class="FEP-star" alt="빈 별">
+		<p>난이도 : ${str1}</p>
+		<img src="./assets/dist/images/empty-star.png" class="FEP-star FEP-star1" alt="빈 별">
 	</div>
 	<div class="card-body FEP-cardBody">
 		<div class="FEP-cardContent">
 			<p class="card-text">
-				Python 메모리 관리 기법에 대해 설명해 보세요.
+				${str2}
 			</p>
 			<h5 class="card-title FEP-subHeading">질문 의도</h5>
 			<hr class="FEP-hr">
 			<p class="card-text">
-				현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
+				${str3}
 			</p>
 			<h5 class="card-title FEP-subHeading">만점 답안</h5>
 			<hr class="FEP-hr">
 			<p class="card-text">
-				메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
+				${str4}
 			</p>
 		</div>
 	</div>
 </div>
 <div class="card text-center FEP-container">
 	<div class="card-header FEP-cardHeader">
-		<p>난이도 : 하</p>
-		<img src="./assets/dist/images/empty-star.png" class="FEP-star" alt="빈 별">
+		<p>난이도 : ${str5}</p>
+		<img src="./assets/dist/images/empty-star.png" class="FEP-star FEP-star2" alt="빈 별">
 	</div>
 	<div class="card-body FEP-cardBody">
 		<div class="FEP-cardContent">
 			<p class="card-text">
-				Python 메모리 관리 기법에 대해 설명해 보세요.
+				${str6}
 			</p>
 			<h5 class="card-title FEP-subHeading">질문 의도</h5>
 			<hr class="FEP-hr">
 			<p class="card-text">
-				현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
+				${str7}
 			</p>
 			<h5 class="card-title FEP-subHeading">만점 답안</h5>
 			<hr class="FEP-hr">
 			<p class="card-text">
-				메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
+				${str8}
 			</p>
 		</div>
 	</div>
 </div>
-<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right FEP-arrow" viewBox="0 0 16 16">
-	<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-</svg>
+<button class=FEP-arrowContainer>
+	<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-right FEP-arrow" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+	</svg>
+</button>
 </div>
 `
 
-const OFMPage = `
+const OFMPage = (str1) => `
 <div class="OFMP-title">
-			<p class="h1 OFMP-h1">Only For Me</p>
-		</div>
-		<div class="OFMP-cardGroup">
-			<div class="card text-center OFMP-container">
-				<div class="card-header OFMP-cardHeader">
-					<p>난이도 : 하</p>
-					<img src="./assets/dist/images/star.png" class="OFMP-star" alt="빈 별">
-				</div>
-				<div class="card-body OFMP-cardBody">
-					<div class="OFMP-cardContent">
-						<p class="card-text">
-							Python 메모리 관리 기법에 대해 설명해 보세요.
-						</p>
-						<h5 class="card-title OFMP-subHeading">질문 의도</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
-						</p>
-						<h5 class="card-title OFMP-subHeading">만점 답안</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="card text-center OFMP-container">
-				<div class="card-header OFMP-cardHeader">
-					<p>난이도 : 하</p>
-					<img src="./assets/dist/images/star.png" class="OFMP-star" alt="빈 별">
-				</div>
-				<div class="card-body OFMP-cardBody">
-					<div class="OFMP-cardContent">
-						<p class="card-text">
-							Python 메모리 관리 기법에 대해 설명해 보세요.
-						</p>
-						<h5 class="card-title OFMP-subHeading">질문 의도</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
-						</p>
-						<h5 class="card-title OFMP-subHeading">만점 답안</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="card text-center OFMP-container">
-				<div class="card-header OFMP-cardHeader">
-					<p>난이도 : 하</p>
-					<img src="./assets/dist/images/star.png" class="OFMP-star" alt="빈 별">
-				</div>
-				<div class="card-body OFMP-cardBody">
-					<div class="OFMP-cardContent">
-						<p class="card-text">
-							Python 메모리 관리 기법에 대해 설명해 보세요.
-						</p>
-						<h5 class="card-title OFMP-subHeading">질문 의도</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
-						</p>
-						<h5 class="card-title OFMP-subHeading">만점 답안</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="card text-center OFMP-container">
-				<div class="card-header OFMP-cardHeader">
-					<p>난이도 : 하</p>
-					<img src="./assets/dist/images/star.png" class="OFMP-star" alt="빈 별">
-				</div>
-				<div class="card-body OFMP-cardBody">
-					<div class="OFMP-cardContent">
-						<p class="card-text">
-							Python 메모리 관리 기법에 대해 설명해 보세요.
-						</p>
-						<h5 class="card-title OFMP-subHeading">질문 의도</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							현업 개발에 있어서 메모리 누수를 해결하지 않는다면 메모리 사용량이 증가되면서 시스템의 메모리가 부족해 운영체제가 프로그램을 강제 종료시키는 등의 문제가 발생한다. 때문에 메모리 정리에 중요성을 인식하고 있는지, 또한 메모리 정리의 중요 Point인 Garbage Collection을 이해하고 있는지 묻는 질문이다.
-						</p>
-						<h5 class="card-title OFMP-subHeading">만점 답안</h5>
-						<hr class="OFMP-hr">
-						<p class="card-text">
-							메모리를 직접 관리하게 되는 경우 여러 애로 사항이 있는데, 첫 번째는 필요없는 메모리를 해제하지 않는 경우 메모리 누수로 이어지고 이러한 누수가 누적되면 치명적인 문제가 된다는 것입니다. 두 번째는 사용 중인 메모리를 잘못 중단하게 되면, 중요 데이터의 일부가 손상될 수 있다는 것입니다.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+<p class="h1 OFMP-h1">Only For Me</p>
+</div>
+<div class="OFMP-cardGroup">
+	${str1}
+</div>
 `
 
 const $main = document.querySelector('.main');
 const $navBE = document.querySelector('.nav-BE');
 const $navFE = document.querySelector('.nav-FE');
 const $navOFM = document.querySelector('.nav-OFM');
+const $navBrand = document.querySelector('.navbar-brand');
 
 let questionLevel;
 let questionField;
+let timer_micro;
+let timer_sec;
+let timer_min;
 const url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
 const data = [{
 	"role": "system",
@@ -357,11 +274,18 @@ const data = [{
 }];
 
 const questionList = [];
-const favoriteQuestion = [];
+let favoriteQuestion = [];
+
+// 모의 면접 타이머 정지
+function stopTimer() {
+	clearInterval(timer_micro);
+	clearInterval(timer_sec);
+	clearInterval(timer_min);
+}
 
 // 클릭 시 BE Cheat Sheet 페이지로 이동
-pageRenderByButton($navBE, () => {
-
+function BEPPageRender() {
+	stopTimer();
 	data[0]['content'] = "assistant는 백엔드 기술 면접 전문가이다.";
 	data[1]['content'] = "백엔드 기술 면접 예시 질문 2개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
 
@@ -375,23 +299,32 @@ pageRenderByButton($navBE, () => {
 	}).then((res) => res.json()
 	).then((res) => res.choices[0].message.content
 	).then((res) => {
-		console.log(res);
-		const resList = res.split('\n');
-		console.log(resList);
-		const reformList = [{
-			"question" : resList[2].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"perfectAnswer" : resList[3].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"intent" : resList[4].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"difficulty" : resList[5].split(":")[1].trim().replace('"', '').slice(0, 1),
-			"part" : "BackEnd"
-		},{
-			"question" : resList[8].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"perfectAnswer" : resList[9].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"intent" : resList[10].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"difficulty" : resList[11].split(":")[1].trim().replace('"', '').slice(0, 1),
-			"part" : "BackEnd"
-		}];
-		
+		const queList = res.split('}');
+		const reformList = []
+		queList.forEach(que => {
+			queInfo = que.split("\n")
+			if (queInfo.length != 1) {
+				const queReform = {};
+				queInfo.forEach(info => {
+					if (info.includes(":")) {
+						console.log(info);
+						queContent = info.split(":")[1].trim().replaceAll('"', '').replaceAll(',', '');
+						if (info.includes("question")) {
+							queReform['question'] = queContent;
+						} else if(info.includes("answer")){
+							queReform['perfectAnswer'] = queContent;
+						} else if(info.includes("intent")){
+							queReform['intent'] = queContent;
+						} else if(info.includes("difficulty")){
+							queReform['difficulty'] = queContent;
+						}
+					}
+				})
+				queReform['part'] = 'BackEnd';
+				reformList.push(queReform);
+			}
+		})
+
 		pageRender(BEPage(reformList[0]['difficulty'], reformList[0]['question'], reformList[0]['intent'], reformList[0]['perfectAnswer'], reformList[1]['difficulty'], reformList[1]['question'], reformList[1]['intent'], reformList[1]['perfectAnswer']));
 
 		// 즐겨찾기 별 변경
@@ -404,9 +337,8 @@ pageRenderByButton($navBE, () => {
 			}
 			else {
 				$BEPStar1.setAttribute('src', "./assets/dist/images/empty-star.png");
-				favoriteQuestion.pop();
+				favoriteQuestion = favoriteQuestion.filter((favQue) => favQue['question'] !== reformList[0]['question'])
 			}
-			console.log(favoriteQuestion);
 		})
 		const $BEPStar2 = $main.querySelector('.BEP-star2');
 		$BEPStar2.addEventListener('click', () => {
@@ -417,37 +349,180 @@ pageRenderByButton($navBE, () => {
 			}
 			else {
 				$BEPStar2.setAttribute('src', "./assets/dist/images/empty-star.png");
-				favoriteQuestion.pop();
+				favoriteQuestion = favoriteQuestion.filter((favQue) => favQue['question'] !== reformList[1]['question'])
 			}
-			console.log(favoriteQuestion);
 		})
+		// 화살표 클릭 시 BEPage 다시 렌더링
+		const $BEPArrowContainer = $main.querySelector('.BEP-arrowContainer');
+		pageRenderByButton($BEPArrowContainer, BEPPageRender);
 	}).catch((err) => {
 		console.log(err);
 	})
-});
+};
+pageRenderByButton($navBE, BEPPageRender);
 
 // 클릭 시 FE Cheat Sheet 페이지로 이동
-pageRenderByButton($navFE, () => {
-	pageRender(FEPage);
-});
+function FEPageRender() {
+	stopTimer();
+	data[0]['content'] = "assistant는 프론트엔드 기술 면접 전문가이다.";
+	data[1]['content'] = "프론트엔드 기술 면접 예시 질문 2개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
+
+	fetch(url, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(data),
+		redirect: "follow",
+	}).then((res) => res.json()
+	).then((res) => res.choices[0].message.content
+	).then((res) => {
+		const queList = res.split('}');
+		const reformList = []
+		queList.forEach(que => {
+			queInfo = que.split("\n")
+			if (queInfo.length != 1) {
+				const queReform = {};
+				queInfo.forEach(info => {
+					if (info.includes(":")) {
+						queContent = info.split(":")[1].trim().replaceAll('"', '').replaceAll(',', '');
+						if (info.includes("question")) {
+							queReform['question'] = queContent;
+						} else if(info.includes("answer")){
+							queReform['perfectAnswer'] = queContent;
+						} else if(info.includes("intent")){
+							queReform['intent'] = queContent;
+						} else if(info.includes("difficulty")){
+							queReform['difficulty'] = queContent;
+						}
+					}
+				})
+				queReform['part'] = 'FrontEnd';
+				reformList.push(queReform);
+			}
+		})
+
+		pageRender(FEPage(reformList[0]['difficulty'], reformList[0]['question'], reformList[0]['intent'], reformList[0]['perfectAnswer'], reformList[1]['difficulty'], reformList[1]['question'], reformList[1]['intent'], reformList[1]['perfectAnswer']));
+
+		// 즐겨찾기 별 변경
+		const $FEPStar1 = $main.querySelector('.FEP-star1');
+		$FEPStar1.addEventListener('click', () => {
+			const starSrc = $FEPStar1.getAttribute('src')
+			if (starSrc.includes('empty-star.png')) {
+				$FEPStar1.setAttribute('src', "./assets/dist/images/star.png");
+				favoriteQuestion.push(reformList[0]);
+			}
+			else {
+				$FEPStar1.setAttribute('src', "./assets/dist/images/empty-star.png");
+				favoriteQuestion = favoriteQuestion.filter((favQue) => favQue['question'] !== reformList[0]['question'])
+			}
+		})
+		const $FEPStar2 = $main.querySelector('.FEP-star2');
+		$FEPStar2.addEventListener('click', () => {
+			const starSrc = $FEPStar2.getAttribute('src')
+			if (starSrc.includes('empty-star.png')) {
+				$FEPStar2.setAttribute('src', "./assets/dist/images/star.png");
+				favoriteQuestion.push(reformList[1]);
+			}
+			else {
+				$FEPStar2.setAttribute('src', "./assets/dist/images/empty-star.png");
+				favoriteQuestion = favoriteQuestion.filter((favQue) => favQue['question'] !== reformList[1]['question'])
+			}
+		})
+		// 화살표 클릭 시 FEPage 다시 렌더링
+		const $FEPArrowContainer = $main.querySelector('.FEP-arrowContainer');
+		pageRenderByButton($FEPArrowContainer, FEPageRender);
+	}).catch((err) => {
+		console.log(err);
+	})
+};
+pageRenderByButton($navFE, FEPageRender);
 
 // 클릭 시 Only For Me 페이지로 이동
-pageRenderByButton($navOFM, () => {
-	pageRender(OFMPage);
-});
+function OFMRender() {
+	stopTimer();
+	let addHTML = ``;
+	let starId = 0;
+	const starIdList = [];
+	const questionBox = [];
+	favoriteQuestion.forEach(que => {
+		addHTML += `
+		<div class="card text-center OFMP-container">
+			<div class="card-header OFMP-cardHeader">
+				<p>난이도 : ${que['difficulty']}</p>
+				<img src="./assets/dist/images/star.png" class="OFMP-star OFM-star${starId}" alt="별" data-que=${que['question']}>
+			</div>
+			<div class="card-body OFMP-cardBody">
+				<div class="OFMP-cardContent">
+					<p class="card-text">
+						${que['question']}
+					</p>
+					<h5 class="card-title OFMP-subHeading">질문 의도</h5>
+					<hr class="OFMP-hr">
+					<p class="card-text">
+						${que['intent']}
+					</p>
+					<h5 class="card-title OFMP-subHeading">만점 답안</h5>
+					<hr class="OFMP-hr">
+					<p class="card-text">
+						${que['perfectAnswer']}
+					</p>
+				</div>
+			</div>
+		</div>
+		`
+		starIdList.push(".OFM-star" + starId);
+		starId += 1
+	});
 
+
+	pageRender(OFMPage(addHTML));
+
+	starIdList.forEach(id => {
+		const $star = $main.querySelector(id);
+		const queData = $star.dataset['que'];
+		$star.addEventListener('click', () => {
+			const starSrc = $star.getAttribute('src')
+			if (starSrc.includes('empty-star.png')) {
+				$star.setAttribute('src', "./assets/dist/images/star.png");
+				for(let i = 0; i < questionBox.length; i++){
+					if (questionBox[i]['question'] == queData){
+						favoriteQuestion.push(questionBox.pop(i));
+						break;
+					}
+				}
+			}
+			else {
+				$star.setAttribute('src', "./assets/dist/images/empty-star.png");
+				for(let i = 0; i < favoriteQuestion.length; i++){
+					if (favoriteQuestion[i]['question'] == queData){
+						questionBox.push(favoriteQuestion.pop(i));
+						break;
+					}
+				}
+			}
+			console.log('questionBox', questionBox);
+			console.log('favoriteQuestion', favoriteQuestion);
+		})
+	})
+}
+pageRenderByButton($navOFM, OFMRender);
+
+// main 태그 안 page 렌더링
 function pageRender(page) {
 	$main.innerHTML = page;
 }
 
+// 버튼에 pageRender 메서드를 클릭 이벤트 할당
 function pageRenderByButton(btn, renderFunction) {
 	btn.addEventListener('click', () => {
 		renderFunction();
 	});
 }
 
-// 메인 화면, 경력 선택 페이지 렌더링 메서드
+// 메인 화면, 경력 선택 페이지 렌더링
 function firstPageRender() {
+	stopTimer();
 	pageRender(firstPage);
 
 	const $careerSelectBtn = $main.querySelectorAll('.career-select-btn');
@@ -458,6 +533,7 @@ function firstPageRender() {
 		});
 	});
 };
+pageRenderByButton($navBrand, firstPageRender)
 
 // 직무 선택 페이지 렌더링 메서드
 function jobSelectPageRender() {
@@ -491,7 +567,7 @@ function interviewStartPageRender() {
 
 // 모의 면접 문제 페이지 렌더링 메서드
 function interviewPageRender() {
-	
+
 	data[0]['content'] = "assistant는 " + questionLevel + " " + questionField + " 기술 면접 전문가이다.";
 	data[1]['content'] = questionLevel + " " + questionField + " 기술 면접 예시 질문 1개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
 	fetch(url, {
@@ -503,16 +579,16 @@ function interviewPageRender() {
 		redirect: "follow",
 	}).then((res) => res.json()
 	).then((res) => res.choices[0].message.content
-	).then((res) =>{
+	).then((res) => {
 		const resList = res.split('\n');
 		const reformList = {
-			"question" : resList[1].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"perfectAnswer" : resList[2].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"intent" : resList[3].split(":")[1].trim().replace('"', '').slice(0, -2),
-			"difficulty" : resList[4].split(":")[1].trim().replace('"', '').slice(0, 1),
-			"part" : questionField
+			"question": resList[1].split(":")[1].trim().replace('"', '').slice(0, -2),
+			"perfectAnswer": resList[2].split(":")[1].trim().replace('"', '').slice(0, -2),
+			"intent": resList[3].split(":")[1].trim().replace('"', '').slice(0, -2),
+			"difficulty": resList[4].split(":")[1].trim().replace('"', '').slice(0, 1),
+			"part": questionField
 		};
-		
+
 		pageRender(interviewPage(reformList['difficulty'], questionList.length + 1, reformList['question']));
 
 		let timer = 0;
@@ -521,50 +597,48 @@ function interviewPageRender() {
 		let sec = parseInt(document.querySelector(".sec").innerText);
 		let min = parseInt(document.querySelector(".min").innerText);
 
-		let timer_micro = setInterval(() => {
+		timer_micro = setInterval(() => {
 			micro++;
-			if(micro == 100) {
-					micro = "00";
-			} else if(micro < 10){
-					micro = "0" + micro;
+			if (micro == 100) {
+				micro = "00";
+			} else if (micro < 10) {
+				micro = "0" + micro;
 			}
 			document.querySelector(".micro").innerText = micro;
 		}, 10);
 
 		//start seconds
-		let timer_sec = setInterval(() => {
-			//console.log(i);
+		timer_sec = setInterval(() => {
 			sec++;
-			if(sec == 60) {
-					sec = "00";
-			} else if(sec < 10){
-					sec = "0" + sec;
+			if (sec == 60) {
+				sec = "00";
+			} else if (sec < 10) {
+				sec = "0" + sec;
 			}
 			document.querySelector(".sec").innerText = sec;
 		}, 1000);
 
 		//start minutes
-		let timer_min = setInterval(() => {
+		timer_min = setInterval(() => {
 			min++;
 
-			if(min == 60) {
-					min = 0;
-			} else if(min < 10){
-					min = "0" + min;
+			if (min == 60) {
+				min = 0;
+			} else if (min < 10) {
+				min = "0" + min;
 			}
 
 			document.querySelector(".min").innerText = min;
 		}, 60000);
-		
+
 		const $submitBtn = $main.querySelector('.submit-btn');
-		pageRenderByButton($submitBtn, () =>{
-			clearInterval(timer_micro);
-			clearInterval(timer_sec);
-			clearInterval(timer_min);
+		pageRenderByButton($submitBtn, () => {
+			stopTimer();
 			reformList['answer'] = $main.querySelector('.iP-textarea').value;
 			questionList.push(reformList);
 			resultPageRender();
 		});
+
 	}).catch((err) => {
 		console.log(err);
 	})
@@ -586,21 +660,16 @@ function resultPageRender() {
 			$rPStar.setAttribute('src', "./assets/dist/images/empty-star.png");
 			favoriteQuestion.pop();
 		}
-		console.log(favoriteQuestion);
-	})
+	});
 
 	// 다음 문제 버튼
 	const $nextBtn = $main.querySelector('.rP-nextBtn')
-	if (questionList.length == 10){
+	if (questionList.length == 10) {
 		$nextBtn.innerText = "다시하기"
 		pageRenderByButton($nextBtn, firstPageRender);
-	}else{
+	} else {
 		pageRenderByButton($nextBtn, interviewPageRender);
 	}
-	
-}
-
-function changeStar() {
 
 }
 
