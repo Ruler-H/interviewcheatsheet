@@ -276,6 +276,44 @@ const data = [{
 const questionList = [];
 let favoriteQuestion = [];
 
+function loadingWithMask(gif) {
+	//화면의 높이와 너비를 구합니다.
+	var maskHeight = $(document).height();
+	var maskWidth  = window.document.body.clientWidth;
+	 
+	//화면에 출력할 마스크를 설정해줍니다.
+	var mask = "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+	var loadingSpinner = `
+	<div class="spinner-border text-secondary" role="status" style='position: absolute; display: block; margin-top: 10rem;' id="loading-spinner">
+		<span class="visually-hidden">Loading...</span>
+	</div>
+	`;
+
+	//화면에 레이어 추가
+	$('body')
+			.append(mask)
+
+	//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채웁니다.
+	$('#mask').css({
+					'width' : maskWidth,
+					'height': maskHeight,
+					'opacity' : '0.3'
+	}); 
+
+	//마스크 표시
+	$('#mask').show();
+
+	//로딩중 이미지 표시
+	
+	$('main').append(loadingSpinner);
+	$('#loading-spinner').show();
+}
+
+function closeLoadingWithMask() {
+	$('#mask, #loadingSpinner').hide();
+	$('#mask, #loadingSpinner').empty();  
+}
+
 // 모의 면접 타이머 정지
 function stopTimer() {
 	clearInterval(timer_micro);
@@ -288,7 +326,7 @@ function BEPPageRender() {
 	stopTimer();
 	data[0]['content'] = "assistant는 백엔드 기술 면접 전문가이다.";
 	data[1]['content'] = "백엔드 기술 면접 예시 질문 2개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
-
+	loadingWithMask();
 	fetch(url, {
 		method: "POST",
 		headers: {
@@ -324,7 +362,7 @@ function BEPPageRender() {
 				reformList.push(queReform);
 			}
 		})
-
+		closeLoadingWithMask();
 		pageRender(BEPage(reformList[0]['difficulty'], reformList[0]['question'], reformList[0]['intent'], reformList[0]['perfectAnswer'], reformList[1]['difficulty'], reformList[1]['question'], reformList[1]['intent'], reformList[1]['perfectAnswer']));
 
 		// 즐겨찾기 별 변경
@@ -366,7 +404,7 @@ function FEPageRender() {
 	stopTimer();
 	data[0]['content'] = "assistant는 프론트엔드 기술 면접 전문가이다.";
 	data[1]['content'] = "프론트엔드 기술 면접 예시 질문 2개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
-
+	loadingWithMask();
 	fetch(url, {
 		method: "POST",
 		headers: {
@@ -401,7 +439,7 @@ function FEPageRender() {
 				reformList.push(queReform);
 			}
 		})
-
+		closeLoadingWithMask();
 		pageRender(FEPage(reformList[0]['difficulty'], reformList[0]['question'], reformList[0]['intent'], reformList[0]['perfectAnswer'], reformList[1]['difficulty'], reformList[1]['question'], reformList[1]['intent'], reformList[1]['perfectAnswer']));
 
 		// 즐겨찾기 별 변경
@@ -570,6 +608,7 @@ function interviewPageRender() {
 
 	data[0]['content'] = "assistant는 " + questionLevel + " " + questionField + " 기술 면접 전문가이다.";
 	data[1]['content'] = questionLevel + " " + questionField + " 기술 면접 예시 질문 1개를 질문, 모범 답변, 질문 의도, 질문 난이도로 정리해서 한글로 답해줘. 질문 난이도는 상, 중, 하로 답변해주고, 오직 json 형태로만 응답주고, key 값으로는 question, answer, intent, difficulty로 응답해줘.";
+	loadingWithMask();
 	fetch(url, {
 		method: "POST",
 		headers: {
@@ -588,7 +627,7 @@ function interviewPageRender() {
 			"difficulty": resList[4].split(":")[1].trim().replace('"', '').slice(0, 1),
 			"part": questionField
 		};
-
+		closeLoadingWithMask();
 		pageRender(interviewPage(reformList['difficulty'], questionList.length + 1, reformList['question']));
 
 		let timer = 0;
