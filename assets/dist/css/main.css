@@ -12,15 +12,17 @@
 	height: 6rem;
 }
 
-/* layout CSS */
 .footer-area{
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	padding: 3rem;
+	background-color: rgb(252, 252, 254);
+	border-top: 0.2rem solid #c4c4c4;
+	position : absolute;
+	bottom : 0;
 }
 
-/* nav CSS */
 .ormi-img{
 	width: 3rem;
 	margin-right: 0.5rem;
@@ -296,6 +298,10 @@
 .FEP-subHeading,
 .OFMP-subHeading{
 	margin-top: 1rem;
+}
+
+.BEP-cardText{
+	display: inline-block;
 }
 
 /* BEPage & FEPage CSS */
